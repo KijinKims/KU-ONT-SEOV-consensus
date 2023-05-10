@@ -34,10 +34,10 @@ workflow consensus {
     
     main:
         segments.combine(fastq).set{ref_fastq}
-        consensus(ref_fastq)
+        consensus_process(ref_fastq)
 }
 
-process consensus {
+process consensus_process {
     conda 'seov_consensus'
     publishDir "${params.outdir}/consensus", mode: 'copy'
     tag "${params.prefix}:consensus"
