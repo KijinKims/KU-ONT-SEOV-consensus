@@ -46,6 +46,7 @@ process consensus_process {
         tuple path(ref), path(fastq)
     output:
         path "${params.prefix}_${ref.simpleName}.consensus.fasta"
+        path "bams/${params.prefix}_${ref.simpleName}.bam"
     """
     # variant call
     mini_align -t 8 -p ${params.prefix}_${ref.simpleName} -i $fastq -r $ref -m -f -M 2 -S 4 -O 4,24 -E 2,1
@@ -62,6 +63,8 @@ process consensus_process {
     # drop low coverage region
     bedtools genomecov -bga -ibam ${params.prefix}_${ref.simpleName}.bam | awk '\$4 < ${params.low_cov_threshold}' | bedtools merge -i - > low_cov_${params.low_cov_threshold}.bed
     bedtools maskfasta -fi ${ref.simpleName}.consensus.fasta -bed low_cov_${params.low_cov_threshold}.bed -fo ${params.prefix}_${ref.simpleName}.consensus.fasta
+    mkdir bams
+    mv ${params.prefix}_${ref.simpleName}.bam bams/
 
     # change fasta header
     header=">${params.prefix}_${ref.simpleName}_consensus low_cov_thrs=${params.low_cov_threshold} var_qual_thrs=${params.variant_quality_threshold} var_depth_thrs=${params.variant_depth_threshold}"
