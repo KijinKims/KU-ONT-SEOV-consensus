@@ -39,7 +39,7 @@ workflow consensus {
 
 process consensus_process {
     conda 'seov_consensus'
-    publishDir "${params.outdir}/consensus", mode: 'copy'
+    publishDir "${params.outdir}", mode: 'copy'
     tag "${params.prefix}:consensus"
 
     input:
