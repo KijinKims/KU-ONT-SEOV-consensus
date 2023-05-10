@@ -16,6 +16,7 @@ readlink -f SEOV_L.fasta
 
 Then, open the `nextflow.config` at home folder.
 Paste the command output path between the quotes of `L = ""`.
+
 For example,
 ```bash
 L = "/home/kijnkims/seov_consensus/References/SEOV_L.fasta"
