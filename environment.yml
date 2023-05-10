@@ -1,4 +1,4 @@
-name: seov_cosnensus
+name: seov_consensus
 dependencies:
   - conda-forge::python>=3.7
   - conda-forge::pip
