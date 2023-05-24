@@ -40,3 +40,6 @@ cd test_output
 ```
 
 If the installation is done successfully, you could see the consensus of each segment in the `test_output` folder.
+
+## Funding
+This work was supported by the National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT) (2023R1A2C2006105).
