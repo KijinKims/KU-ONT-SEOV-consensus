@@ -1,4 +1,4 @@
-# seov_consensus
+# KU-ONT-SEOV-consensus
 program to generate consensus sequence from Nanopore sequencing dataset of SEOV
 
 ## installation
