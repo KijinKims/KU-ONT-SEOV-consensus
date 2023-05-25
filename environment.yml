@@ -7,3 +7,4 @@ dependencies:
   - bioconda::bcftools
   - bioconda::samtools
   - bioconda::bedtools
+  - bioconda::minimap2
