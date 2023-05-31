@@ -23,11 +23,12 @@ process consensus_process {
     medaka variant $seg ${bam.simpleName}.hdf ${bam.simpleName}.medaka.vcf
     medaka tools annotate --dpsp ${bam.simpleName}.medaka.vcf $seg $bam ${bam.simpleName}.medaka.annotated.vcf
     bcftools view -i 'QUAL>${params.variant_quality_threshold} & INFO/DP>${params.variant_depth_threshold}' ${bam.simpleName}.medaka.annotated.vcf > ${bam.simpleName}.medaka.filtered.vcf
-    bgzip -f ${bam.simpleName}.medaka.filtered.vcf
-    tabix -p vcf ${bam.simpleName}.medaka.filtered.vcf.gz
+    python ${params.indel_filter_script} --input ${bam.simpleName}.medaka.filtered.vcf --output ${bam.simpleName}.medaka.indel_filtered.vcf
+    bgzip -f ${bam.simpleName}.medaka.indel_filtered.vcf
+    tabix -p vcf ${bam.simpleName}.medaka.indel_filtered.vcf.gz
 
     # apply variants to reference to generate consensus
-    cat $seg | bcftools consensus ${bam.simpleName}.medaka.filtered.vcf.gz > ${bam.simpleName}.consensus.nodropped.fasta
+    cat $seg | bcftools consensus ${bam.simpleName}.medaka.indel_filtered.vcf.gz > ${bam.simpleName}.consensus.nodropped.fasta
 
     # drop low coverage region
     bedtools genomecov -bga -ibam ${bam.simpleName}.bam | awk '\$4 < ${params.low_cov_threshold}' | bedtools merge -i - > low_cov_${params.low_cov_threshold}.bed
