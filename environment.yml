@@ -8,3 +8,4 @@ dependencies:
   - bioconda::samtools
   - bioconda::bedtools
   - bioconda::minimap2
+  - bioconda::vcfpy
