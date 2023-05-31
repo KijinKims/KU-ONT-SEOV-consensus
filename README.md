@@ -31,6 +31,16 @@ S = "/home/kijnkims/seov_consensus/References/SEOV_S.fasta"
 ```
 Save and close the file.
 
+## Set custom script path
+Likewise, please set the custom script path to `nextflow.config`.
+
+```bash
+cd ../
+readlink -f filter_indel_with_sr.py
+```
+
+Paste the command output path between the quotes of `indel_filter_script = ""`.
+
 ## Test
 ```bash
 conda activate seov_consensus
