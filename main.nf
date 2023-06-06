@@ -5,7 +5,7 @@ include { consensus as consensus_l; consensus as consensus_m; consensus as conse
 workflow {
     main:
         if( params.help ) {
-            help = """consensus.nf: Nextflow script to generate the consensus sequence of SEOV from Nanopore sequenicng datset
+            help = """main.nf: Nextflow script to generate the consensus sequence of SEOV from Nanopore sequenicng datset
                     |Required arguments:
                     |  --fastq  Location of the input FASTQ file.
                     |  --prefix  Prefix of the run.
