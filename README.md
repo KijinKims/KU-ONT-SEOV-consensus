@@ -52,4 +52,4 @@ cd test_output
 If the installation is done successfully, you could see the consensus of each segment in the `test_output` folder.
 
 ## Funding
-This work was supported by the National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT) (2023R1A2C2006105).
+This work was supported by the National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT) (2023R1A2C2006105) and the Institute for Basic Science Korea (IBS-R801-D92022-a03). In addition, this study was funded by Korea Institute of Marine Science & Technology Promotion (KIMST) funded by the Ministry of Oceans and Fisheries, Korea (20210466) and the Basic Research Program through the National Re-search Foundation of Korea (NRF) by the Ministry of Education (NRF-2021R1I1A2049607).
