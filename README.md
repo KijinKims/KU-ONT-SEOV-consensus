@@ -45,7 +45,7 @@ Paste the command output path between the quotes of `indel_filter_script = ""`.
 ```bash
 conda activate seov_consensus
 cd Test
-nextflow ../consensus.nf --fastq test.fastq --prefix test --outdir test_output
+nextflow ../main.nf --fastq test.fastq --prefix test --outdir test_output
 cd test_output
 ```
 
