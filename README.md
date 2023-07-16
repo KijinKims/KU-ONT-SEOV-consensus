@@ -21,13 +21,13 @@ Paste the command output path between the quotes of `L = ""`.
 
 For example,
 ```bash
-L = "/home/kijnkims/seov_consensus/References/SEOV_L.fasta"
+L = "/home/kijnkims/KU-ONT-SEOV-consensus/References/SEOV_L.fasta"
 ```
 
 Do the same step for M and S segments.
 ```bash
-M = "/home/kijnkims/seov_consensus/References/SEOV_M.fasta"
-S = "/home/kijnkims/seov_consensus/References/SEOV_S.fasta"
+M = "/home/kijnkims/KU-ONT-SEOV-consensus/References/SEOV_M.fasta"
+S = "/home/kijnkims/KU-ONT-SEOV-consensus/References/SEOV_S.fasta"
 ```
 Save and close the file.
 
