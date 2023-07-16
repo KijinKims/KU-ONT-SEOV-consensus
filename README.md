@@ -3,8 +3,8 @@ program to generate consensus sequence from Nanopore sequencing dataset of SEOV
 
 ## installation
 ```bash
-git clone https://github.com/KijinKims/seov_consensus.git
-cd seov_consensus
+git clone https://github.com/KijinKims/KU-ONT-SEOV-consensus.git
+cd KU-ONT-SEOV-consensus
 conda env create-f environment.yml # you could use mamba or micromamba for faster installation.
 conda activate seov-consensus
 pip install medaka-cpu
